@@ -9,11 +9,15 @@ from .views import (
     OrderViewSet,
     PaymentViewSet,
     UserProfileViewSet,
+    ItemAndCategoryViewSet,
 )
 
 router = DefaultRouter()
 
 router.register(r"items", ItemViewSet)
+router.register(
+    r"items-and-categories", ItemAndCategoryViewSet, basename="items-and-categories"
+)
 router.register(r"categories", CategoryViewSet)
 router.register(r"orders", OrderViewSet)
 router.register(r"order-items", OrderItemViewSet)
