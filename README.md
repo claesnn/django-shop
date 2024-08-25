@@ -7,6 +7,7 @@
 
 ## Tools used:
 
+- UV
 - Pylint
 - Black
 - Isort
