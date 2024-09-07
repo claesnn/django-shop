@@ -14,16 +14,22 @@ from .models import (
 )
 
 
-class ItemSerializer(ModelSerializer):
+class CategorySerializer(ModelSerializer):
+    class Meta:
+        model = Category
+        fields = "__all__"
+
+
+class ItemAndCategorySerializer(ModelSerializer):
     class Meta:
         model = Item
         fields = "__all__"
         depth = 1
 
 
-class CategorySerializer(ModelSerializer):
+class ItemSerializer(ModelSerializer):
     class Meta:
-        model = Category
+        model = Item
         fields = "__all__"
 
 

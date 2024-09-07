@@ -19,6 +19,7 @@ from .serializers import (
     CategorySerializer,
     GlobalCounterSerializer,
     ItemSerializer,
+    ItemAndCategorySerializer,
     OrderItemSerializer,
     OrderSerializer,
     PaymentSerializer,
@@ -30,6 +31,11 @@ from .serializers import (
 class ItemViewSet(ModelViewSet):
     queryset = Item.objects.all()
     serializer_class = ItemSerializer
+
+
+class ItemAndCategoryViewSet(ModelViewSet):
+    queryset = Item.objects.all()
+    serializer_class = ItemAndCategorySerializer
 
 
 class CategoryViewSet(ModelViewSet):
